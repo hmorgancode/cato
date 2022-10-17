@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Cato
+
+Cato is a template for a serverless, full-service artist hub site. Built using Next.js and Supabase.
 
 ## Getting Started
 
