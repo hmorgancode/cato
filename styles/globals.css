@@ -1,4 +1,517 @@
 /* https://tailwindcss.com/docs/preflight */
+/* Tailwind makes some common-sense, and some more opinionated,
+   changes to the base CSS experience. it breaks ur shit tho.
+   maybe later.
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@font-face {
+  font-family: 'Gogh';
+  src: url('/assets/fonts/gogh.otf') format('opentype');
+}
+
+/* google font imports go through _document.tsx */
+
+/* Main */
+
+body{
+  background-color: #232D33;
+  margin: 0;
+  font-family: 'Ubuntu';
+}
+
+/* Header */
+
+#header {
+  max-width: 1355px;
+  height: 87px;
+  margin: 30px auto 0 auto;
+  padding: 0px 40px 0px 40px;
+}
+
+#header-bar {  
+  height: 66px;
+  background-color: #2A3B40;
+  border-radius: 8px;
+  display: flex;
+}
+
+.header-graphic {
+  position: absolute;
+  margin: 0 0 0 20px;
+}
+
+#header-left {
+  display: flex;
+  width: 160px;
+  height: 100%;
+}
+
+#logo img {
+  padding: 10px 13px;
+}
+
+#site-title img{
+  padding: 17px 0px;
+}
+
+/* Navigation */
+
+#nav {
+  align-content: right;
+  width: 100%;
+}
+
+#nav ul {
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+  margin: 0px;
+}
+
+#nav ul a{
+  text-decoration:  none;
+}
+
+#nav ul a:hover{
+  color: #fff;
+}
+
+#nav ul li {
+  font-family: 'Gogh';
+  color: #00d1a1;
+  padding: 0px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Content */
+
+#content {
+  padding: 0px 80px;
+  align-items: center;
+}
+
+#container {
+  margin: 30px auto;
+  background-color: #2A3B40;
+  border-radius: 6px;
+  max-width: 1100px;
+  min-height: 500px;
+}
+
+.section-header {
+  height: 40px;
+  width: calc(100% + 40px);
+  margin: 0 0 0 -20px;
+  border: 3px solid #00d1a1 ;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 0 0 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.section-header p {
+  color: white;
+  font-family: 'Gogh';
+  
+}
+
+/* Comissions */
+
+#standard-comms {
+  width: 100%;
+  display: flex;
+  padding: 10px 25px;
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 100%;
+  height: 505px;
+  margin-left: 100%;
+
+  
+}
+
+.single-standard-comm{
+  width: 100%;
+  margin: 15px;
+  height: 505px;
+
+  border-radius: 6px;
+  transition: .2s;
+  overflow: hidden;
+}
+
+.single-standard-comm:hover{
+  transform: scale(1.05);
+}
+
+.single-comm-container {
+  height: 100%;
+  margin: -505px 0 0 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.single-comm-label{
+  width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  background-color: rgba(42, 59, 64, .5);
+}
+
+.swiper-slide{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide img{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.single-comm-header{
+  text-align: center;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.single-comm-swiper{
+  width: 100%;
+  height: 505px;
+  overflow: hidden;
+}
+
+.single-comm-image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 6px;
+  display: flex;
+}
+
+.single-comm-image img{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.single-comm-header p{
+  color: white;
+  font-family: 'Gogh', sans-serif;
+  margin: 0;
+}
+
+.single-comm-price-large{
+  height: 46px !important;
+}
+
+.single-comm-price-flex{
+  height: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+.single-comm-price{
+  padding: 5px 7px;
+  box-sizing: border-box;
+}
+
+.price-title {
+  font-size: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  color: #00d1a1;
+  margin: 0px;
+}
+
+.price-large {
+  font-size: 24px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.price-small {
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.other-commissions-row{
+  height: 280px;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.single-other-comm{
+  width: 50%;
+  height: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.single-other-comm-container{
+  height: 100%;
+  width: 100%;
+  background-color: #2D4549;
+  border-radius: 6px;
+  display: flex;
+}
+
+.single-other-comm-image{
+  width: 55%;
+  height: 100%;
+  background-color: #00d1a1;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+}
+
+.single-other-comm-image img{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.single-other-comm-info{
+  width: 45%;
+  padding: 10px;
+}
+
+#gfx-work{
+  background-color: #2D4549;
+  width: fit-content;
+  font-family: 'Ubuntu';
+  color: #00d1a1;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 12px 60px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+/* TOS */
+
+#tos {
+  max-width: 750px;
+  padding: 8px 40px 12px 40px;
+  margin: 0 auto;
+  background-color:#2D4549;
+  border-radius: 6px;
+  font-family: 'Ubuntu';
+}
+
+#tos h1 {
+  font-family: 'Gogh';
+  text-transform: uppercase;
+  color:#00d1a1;
+  font-size: 30px;
+}
+
+#tos p {
+  color: white;
+}
+
+#tos ul {
+  color: white;
+  list-style-type: none;
+}
+
+/* Footer */
+
+#footer{
+  width: 90%;
+  height: 165px;
+  background-color: #2A3B40;
+  margin: 0 auto;
+  border-radius: 6px 6px 0 0;
+}
+
+#footer-content{
+  max-width: 680px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#footer-info{
+  width: 100%;
+  height: calc(100% - 12px);
+  display: flex;
+}
+
+.footer-info-section{
+  height: 100%;
+}
+
+.footer-info-section ul{
+  color: #376B68;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-info-section ul li{
+  margin: 0 0 4px 0;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+}
+
+.footer-info-section a{
+  text-decoration: none;
+  transition: .2s;
+}
+
+.footer-info-section a:link{
+  color: #376B68;
+}
+
+.footer-info-section a:visited{
+  color: #376B68;
+}
+
+.footer-info-section a:hover{
+  color: #00d1a1 !important;
+}
+
+#footer-bar {
+  background-color: #2D4549;
+  height: 35px;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  margin: -6px 0 0 0;
+}
+
+/* Media Queries */ 
+
+/* Mobile General */
+
+@media screen and (max-width: 800px) {
+  #header{
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      width: 100%;
+  }
+
+  #header-graphic-container{
+      width: 100%;
+      overflow: hidden;
+  }
+
+  .header-graphic{
+      width: 100%;
+      margin: 0;
+  }
+
+  #content {
+      padding: 0px;
+  }
+
+  #container {
+      background-color:unset;
+  }
+
+  .section-header {
+      width: calc(100% - 20px);
+      margin: 0 auto;
+
+  }
+
+  #standard-comms{
+      flex-direction: column;
+      margin: 0;
+  }
+
+  .single-standard-comm{
+      margin: 10px 0;
+      width: 100%;
+      height: 60vh;
+  }
+
+  .single-standard-comm:hover{
+      transform: scale(1);
+  }
+
+  .single-comm-container{
+      margin: -60vh 0 0 0;
+  }
+  
+  .other-commissions-row{
+      flex-direction: column;
+      height: auto;
+      padding: 0 20px;
+  }
+
+  .single-other-comm {
+      width: 100%;
+      padding: 5px 0;
+  }
+
+  .single-other-comm-container {
+      flex-direction: column;
+  }
+
+  .single-other-comm-image{
+      height: 40vh;
+      width: 100%;
+  }
+
+  .single-other-comm-info{
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  #gfx-work{
+      width: 80%;
+      padding: 15px 20px;
+  }
+
+  #tos {
+      margin: 0px 20px;
+      padding: 20px;
+  }
+
+  #tos h1 {
+      margin-top: 0;
+  }
+
+  #footer {
+      height: auto;
+  }
+
+  #footer-info{
+      flex-direction: column;
+  }
+
+  .footer-info-section{
+      margin: 0 0 20px 0;
+      width: 100% !important;
+  }
+}

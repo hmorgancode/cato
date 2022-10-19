@@ -2,7 +2,18 @@
 
 Cato is a template for a serverless, full-service artist hub site. Built using Next.js and Supabase.
 
-## Getting Started
+## Getting Started (TEO THIS MEANS U)
+
+-Use nvm (https://github.com/nvm-sh/nvm) to install Node.js version 16 (the most recent version supported by Vercel). nvm itself is fantastic and simplifies the surprisingly frequent task of switching Node versions.
+-I strongly recommend Visual Studio Code with the following extensions: ESLint, styled-jsx, Tailwind CSS IntelliSense
+
+
+
+
+
+
+
+
 
 First, run the development server:
 

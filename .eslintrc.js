@@ -31,5 +31,8 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/brace-style': ['off'],
     '@typescript-eslint/no-unused-vars': 'off',
-  }
+  },
+  // parserOptions: {
+  //   project: './tsconfig.json',
+  // },
 };
