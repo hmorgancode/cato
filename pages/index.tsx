@@ -3,27 +3,12 @@ import { ReactElement } from 'react';
 import type { NextPage } from 'next';
 
 import CatoHead from '../components/shared/CatoHead';
-import CatoHeader from '../components/shared/CatoHeader';
-import CatoFooter from '../components/shared/CatoFooter';
-import CatoMain from '../components/shared/CatoMain';
 
 const HomePage: NextPage = () => {
   return (
     <>
       <CatoHead title="Teo - Commissions" />
-      <CatoHeader />
-      <CatoMain>
-        <Commissions />
-      </CatoMain>
-      <CatoFooter />
-      <style jsx>{`
-        .test-div {
-          width: 300px;
-          height: 300px;
-          background-color: #FF2222;
-        }
-      `}
-      </style>
+      <Commissions />
     </>
   );
 };

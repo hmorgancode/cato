@@ -31,6 +31,17 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/brace-style': ['off'],
     '@typescript-eslint/no-unused-vars': 'off',
+    // disabling because this is "technically safe" in React and the next.js docs use it
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2063#issuecomment-675156492
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ]
   },
   // parserOptions: {
   //   project: './tsconfig.json',

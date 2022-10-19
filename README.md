@@ -1,35 +1,29 @@
 ## Cato
 
-Cato is a template for a serverless, full-service artist hub site. Built using Next.js and Supabase.
+Cato is a serverless, full-service artist hub site. Built using Next.js and Supabase.
 
 ## Getting Started (TEO THIS MEANS U)
 
 -Use nvm (https://github.com/nvm-sh/nvm) to install Node.js version 16 (the most recent version supported by Vercel). nvm itself is fantastic and simplifies the surprisingly frequent task of switching Node versions.
--I strongly recommend Visual Studio Code with the following extensions: ESLint, styled-jsx, Tailwind CSS IntelliSense
+-I strongly recommend Visual Studio Code with the following extensions: ESLint, styled-jsx, Tailwind CSS IntelliSense (might not need this one but install now just in case)
 
-
-
-
-
-
-
-
-
-First, run the development server:
-
+-To run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the index page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Any .tsx file (typescript jsx, jsx is the syntax of React) added to pages/ will create a new page. I added localhost:3000/otherpage as a more concise example than the index page.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Global css is in styles/globals.css, though you can create css scoped to specific React components with a <style jsx> tag, seen in otherpage.
+I recommend this approach to keep things organized as the project grows.
+
+pages/_document.tsx and pages/_app.tsx are shared templates used for common functionality across the site, like the header and footer.
+Speaking of, the header and footer are in components/shared.
+"CatoHead" is for page-specific information to get added to the HTML <head>, "CatoHeader" is the actual UI element at the top of the page.
 
 ## Learn More
 
